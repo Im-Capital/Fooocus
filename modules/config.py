@@ -415,13 +415,13 @@ default_image_prompt_checkbox = get_config_item_or_set_default(
 )
 default_enhance_checkbox = get_config_item_or_set_default(
     key='default_enhance_checkbox',
-    default_value=False,
+    default_value=True,
     validator=lambda x: isinstance(x, bool),
     expected_type=bool
 )
 default_advanced_checkbox = get_config_item_or_set_default(
     key='default_advanced_checkbox',
-    default_value=False,
+    default_value=True,
     validator=lambda x: isinstance(x, bool),
     expected_type=bool
 )
@@ -433,7 +433,7 @@ default_developer_debug_mode_checkbox = get_config_item_or_set_default(
 )
 default_image_prompt_advanced_checkbox = get_config_item_or_set_default(
     key='default_image_prompt_advanced_checkbox',
-    default_value=False,
+    default_value=True,
     validator=lambda x: isinstance(x, bool),
     expected_type=bool
 )
@@ -487,7 +487,7 @@ available_aspect_ratios = get_config_item_or_set_default(
 )
 default_aspect_ratio = get_config_item_or_set_default(
     key='default_aspect_ratio',
-    default_value='1152*896' if '1152*896' in available_aspect_ratios else available_aspect_ratios[0],
+    default_value='1920*1080' if '1080*1920' in available_aspect_ratios else available_aspect_ratios[0],
     validator=lambda x: x in available_aspect_ratios,
     expected_type=str
 )
